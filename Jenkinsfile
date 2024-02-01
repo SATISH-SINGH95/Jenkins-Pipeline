@@ -3,7 +3,7 @@ pipeline{
     agent any
 
     stages{
-        stage('compile'){
+        stage("compile"){
             steps{
                 bat 'javac Main.java'
             }
