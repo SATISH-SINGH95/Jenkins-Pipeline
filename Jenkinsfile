@@ -3,21 +3,15 @@ pipeline{
     agent any
 
     stages{
-        stage('Build'){
+        stage('compile'){
             steps{
-                echo 'Building..'
+                sh 'javac Main.java'
             }
         }
-        stage('Test'){
+        stage('run'){
             steps{
-                echo 'Testing..'
+                echo 'java Main'
             }
         }
-        stage('Deploy'){
-            steps{
-                echo 'Deploying..'
-            }
-        }
-
     }
 }
